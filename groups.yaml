@@ -112,6 +112,17 @@ network:
   - sensor.igd_received_bytes
   - sensor.igd_sent_bytes
 
+weather:
+  name: Weer
+  entities:
+  - sensor.dark_sky_icon
+  - sensor.dark_sky_summary
+  - sensor.dark_sky_temperature
+  - sensor.dark_sky_precip
+  - sensor.dark_sky_wind_speed
+  - sensor.dark_sky_daily_low_temperature
+  - sensor.dark_sky_daily_high_temperature
+
 automations:
   name: Automations
   entities:
