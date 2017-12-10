@@ -1,0 +1,10 @@
+- platform: cast
+  host: !secret cast_1_host
+- platform: cast
+  host: !secret cast_2_host
+- platform: kodi
+  host: !secret kodi_host
+  port: !secret kodi_port
+  username: !secret kodi_username
+  password: !secret kodi_password
+  turn_off_action: suspend

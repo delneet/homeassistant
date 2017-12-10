@@ -1,0 +1,42 @@
+homeassistant:
+  name: Home
+  latitude: !secret geo_lat
+  longitude: !secret geo_long
+  elevation: 4
+  unit_system: metric
+  time_zone: !secret geo_time_zone
+
+discovery:
+history:
+recorder:
+  purge_interval: 1
+  purge_keep_days: 7
+sun:
+logbook:
+updater:
+configurator:
+conversation:
+frontend:
+zeroconf:
+upnp:
+config:
+
+automation: !include automations.yaml
+group: !include groups.yaml
+input_boolean: !include input_boolean.yaml
+light: !include devices/lights.yaml
+media_player: !include devices/media_players.yaml
+mqtt: !include mqtt.yaml
+mysensors: !include mysensors.yaml
+scene: !include scenes.yaml
+sensor: !include devices/sensors.yaml
+zone: !include zones.yaml
+
+device_tracker:
+  platform: nmap_tracker
+  hosts: !secret device_tracker_hosts
+  home_interval: 10
+  track_new_devices: no
+
+ifttt:
+  key: !secret ifttt_key

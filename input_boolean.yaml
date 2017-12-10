@@ -1,0 +1,4 @@
+woonkamer_chromecast_lights:
+  name: Chromecast woonkamer lights
+  initial: on
+  icon: mdi:google-chrome

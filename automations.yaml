@@ -1,0 +1,134 @@
+- id: lights on after dark
+  alias: Turn on lights after dark
+  trigger:
+    platform: sun
+    event: sunset
+    offset: -00:45:00
+  condition:
+  - condition: state
+    entity_id: group.personen
+    state: home
+  - condition: state
+    entity_id: group.woonkamer_lampen
+    state: 'off'
+  action:
+  - service: scene.turn_on
+    entity_id: scene.woonkamer_avond
+
+- id: 'lights on coming home'
+  alias: 'Turn on light when coming home'
+  trigger:
+    platform: state
+    entity_id: group.personen
+    to: 'home'
+  condition:
+  - condition: state
+    entity_id: group.woonkamer_lampen
+    state: 'off'
+  - condition: time
+    after: '17:00:00'
+    before: '23:00:00'
+  action:
+  - service: light.hue_activate_scene
+    data:
+      group_name: 'Woonkamer'
+      scene_name: 'Avond'
+
+- id: 'alert coming home'
+  alias: Alert when somebody is coming home
+  initial_state: 'off'
+  trigger:
+    platform: state
+    entity_id: device_tracker.sara, device_tracker.daniel
+    to: 'home'
+  condition:
+  - condition: state
+    entity_id: group.personen
+    state: 'home'
+  action:
+  - service: light.turn_on
+    data:
+      entity_id: light.eettafel
+      flash: short
+
+- id: 'wake up lights'
+  alias: 'Turn on lights in the morning'
+  trigger:
+    platform: time
+    at: '06:30:00'
+  condition:
+  - condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  - condition: state
+    entity_id: group.personen
+    state: 'home'
+  - condition: state
+    entity_id: group.woonkamer_lampen
+    state: 'off'
+  action:
+  - service: light.hue_activate_scene
+    data:
+      group_name: 'Woonkamer'
+      scene_name: 'Nachtlampje'
+
+- id: 'low light sensor'
+  alias: 'Low light'
+  initial_state: False
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.light_lux_sensor_3_0
+    below: 30
+  condition:
+  - condition: state
+    entity_id: group.personen
+    state: 'home'
+  - condition: state
+    entity_id: group.woonkamer_lampen
+    state: 'off'
+  - condition: time
+    after: '17:00:00'
+    before: '23:00:00'
+  action:
+  - service: scene.turn_on
+    entity_id: scene.woonkamer_avond
+
+- id: 'chromecast woonkamer playling'
+  alias: "Chromecast woonkamer playing"
+  initial_state: 'off'
+  trigger:
+    platform: state
+    entity_id: media_player.woonkamer
+    to: 'playing'
+  condition:
+  - condition: state
+    entity_id: sun.sun
+    state: 'below_horizon'
+  - condition: state
+    entity_id: input_boolean.woonkamer_chromecast_lights
+    state: 'on'
+  action:
+  - service: scene.turn_on
+    entity_id: scene.woonkamer_avond_tv
+
+- id: 'chromecast woonkamer paused'
+  alias: "Chromecast woonkamer paused/stopped"
+  initial_state: 'off'
+  condition:
+  - condition: state
+    entity_id: sun.sun
+    state: 'below_horizon'
+  - condition: state
+    entity_id: input_boolean.woonkamer_chromecast_lights
+    state: 'on'
+  trigger:
+    platform: state
+    entity_id: media_player.woonkamer
+    from: 'playing'
+  action:
+  - service: scene.turn_on
+    entity_id: scene.woonkamer_avond

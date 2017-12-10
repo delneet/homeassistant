@@ -1,0 +1,12 @@
+
+.idea/
+deps
+*.log
+*.db
+mysensors*.json
+phue.conf
+wapscan.*
+.uuid
+secrets.yaml
+known_devices.yaml
+.HA_VERSION

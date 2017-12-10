@@ -1,0 +1,13 @@
+- platform: time_date
+  display_options:
+    - 'date_time'
+
+- platform: systemmonitor
+  resources:
+    - type: disk_use_percent
+      arg: /
+    - type: memory_free
+    - type: processor_use
+    - type: ipv4_address
+      arg: wlan0
+    - type: since_last_boot

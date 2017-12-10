@@ -1,0 +1,118 @@
+#
+# Views
+#
+woonkamer_tab:
+  view: yes
+  name: Woonkamer
+  icon: mdi:sofa
+  entities:
+    - group.woonkamer_lampen
+    - group.woonkamer_scenes
+    - group.woonkamer_media
+
+slaapkamer_tab:
+  view: yes
+  name: Slaapkamer
+  icon: mdi:hotel
+  entities:
+    - group.slaapkamer_lampen
+    - group.slaapkamer_media
+
+people_tab:
+  view: yes
+  name: Aanwezigheid
+  icon: mdi:account-check
+  entities:
+    - group.personen
+
+devices_tab:
+  view: yes
+  name: Apparaten
+  icon: mdi:chip
+  entities:
+    - group.devices
+
+lights_tab:
+  view: yes
+  icon: mdi:lightbulb-outline
+  entities:
+    - group.woonkamer_lampen
+    - group.slaapkamer_lampen
+
+automations_tab:
+  view: yes
+  icon: mdi:auto-fix
+  entities:
+    - group.automations
+#
+# Groups
+#
+woonkamer_lampen:
+  name: Woonkamer lampen
+  entities:
+    - light.raam
+    - light.computer
+    - light.eettafel
+    - light.kast
+
+woonkamer_scenes:
+  name: Scenes
+  entities:
+    - scene.woonkamer_romantic
+    - scene.woonkamer_avond
+    - scene.woonkamer_avond_tv
+    - scene.woonkamer_nacht
+
+woonkamer_media:
+  name: Media
+  entities:
+    - media_player.woonkamer
+    - media_player.openelec
+
+slaapkamer_lampen:
+  name: Slaapkamer lampen
+  entities:
+
+slaapkamer_media:
+  name: Media
+  entities:
+    - media_player.slaapkamer
+
+personen:
+  name: Personen
+  entities: !secret person_entities
+
+devices:
+  name: Apparaten
+  entities: !secret device_entities
+
+sensors:
+  name: Sensors
+  entities: !secret sensor_entities
+
+tijd:
+  - sun.sun
+  - sensor.date__time
+  - sensor.time__date
+
+stats:
+  name: Stats
+  entities:
+    - sensor.since_last_boot
+    - sensor.cpu_used
+    - sensor.disk_used_
+    - sensor.ram_available
+    - sensor.ipv4_address_wlan0
+
+network:
+  name: Network
+  entities:
+  - sensor.igd_packets_received
+  - sensor.igd_packets_sent
+  - sensor.igd_received_bytes
+  - sensor.igd_sent_bytes
+
+automations:
+  name: Automations
+  entities:
+    - input_boolean.woonkamer_chromecast_lights

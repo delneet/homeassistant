@@ -1,0 +1,34 @@
+- name: Woonkamer romantic
+  entities:
+    light.raam:
+      state: on
+      rgb_color: [250, 0, 0]
+      transition: 3
+    light.computer:
+      state: on
+      rgb_color: [240, 10, 10]
+      transition: 3
+
+- name: Woonkamer avond
+  entities:
+    group.woonkamer_lampen:
+      state: on
+      rgb_color: [240, 160, 80]
+      brightness: 180
+      transition: 2
+
+- name: Woonkamer avond tv
+  entities:
+    group.woonkamer_lampen:
+      state: on
+      rgb_color: [240, 160, 80]
+      brightness: 80
+      transition: 2
+
+- name: Woonkamer nacht
+  entities:
+    group.woonkamer_lampen:
+      state: on
+      rgb_color: [240, 160, 80]
+      brightness: 10
+      transition: 5
