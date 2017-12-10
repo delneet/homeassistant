@@ -11,3 +11,14 @@
     - type: ipv4_address
       arg: wlan0
     - type: since_last_boot
+
+- platform: darksky
+  api_key: !secret darksky_api_key
+  monitored_conditions:
+  - summary
+  - icon
+  - precip_type
+  - temperature
+  - wind_speed
+  - temperature_min
+  - temperature_max
