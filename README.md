@@ -9,6 +9,13 @@ Currently running as a manual install on a raspberry pi zero.
 - [ ] Run Mosquitto externally
 - [ ] Graphite database
 
+## Configurations
+
+### External access
+
+* DNS via DuckDNS (updates with crontab entry)
+* SSL certificates via LetsEncrypt (via _dehydrated_, updates with crontab entry)
+
 ## Maintenance
 
 #### Upgrade
@@ -32,4 +39,3 @@ MySensors gateway has been installed, to add to the boot run:
 
 To start the gateway run:
 `sudo systemctl start mysgateway.service`
-
