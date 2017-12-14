@@ -19,6 +19,7 @@ conversation:
 frontend:
 zeroconf:
 upnp:
+  port_mapping: false # This is done manually on the router.
 config:
 
 automation: !include automations.yaml
