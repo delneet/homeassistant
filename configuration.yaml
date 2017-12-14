@@ -6,21 +6,38 @@ homeassistant:
   unit_system: metric
   time_zone: !secret geo_time_zone
 
+config:
+configurator:
+conversation:
+device_tracker:
+  home_interval: 10
+  hosts: !secret device_tracker_hosts
+  platform: nmap_tracker
+  track_new_devices: no
 discovery:
+duckdns:
+  access_token: !secret duckdns_access_token
+  domain: !secret duckdns_domain
+frontend:
+http:
+  api_password: !secret http_api_password
+  base_url: !secret http_base_url
+  ssl_certificate: !secret http_ssl_certificate
+  ssl_key: !secret http_ssl_key
+  trusted_networks: !secret http_trusted_networks
+ifttt:
+  key: !secret ifttt_key
+logbook:
 recorder:
   purge_interval: 1
   purge_keep_days: 7
 sun:
-logbook:
 updater:
-configurator:
-conversation:
-frontend:
-zeroconf:
 upnp:
   port_mapping: false # This is done manually on the router.
-config:
+zeroconf:
 
+### Includes
 automation: !include automations.yaml
 group: !include groups.yaml
 history: !include history.yaml
@@ -31,26 +48,6 @@ mqtt: !include mqtt.yaml
 mysensors: !include mysensors.yaml
 scene: !include scenes.yaml
 script: !include config/scripts.yaml
-shell_command: !include config/shell_commands.yaml
 sensor: !include devices/sensors.yaml
+shell_command: !include config/shell_commands.yaml
 zone: !include zones.yaml
-
-device_tracker:
-  platform: nmap_tracker
-  hosts: !secret device_tracker_hosts
-  home_interval: 10
-  track_new_devices: no
-
-ifttt:
-  key: !secret ifttt_key
-
-http:
-  api_password: !secret http_api_password
-  base_url: !secret http_base_url
-  ssl_certificate: !secret http_ssl_certificate
-  ssl_key: !secret http_ssl_key
-  trusted_networks: !secret http_trusted_networks
-
-duckdns:
-  domain: !secret duckdns_domain
-  access_token: !secret duckdns_access_token
