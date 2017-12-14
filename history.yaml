@@ -15,7 +15,3 @@ exclude:
   - sensor.date__time
   - sensor.ipv4_address_wlan0
   - sensor.since_last_boot
-include:
-  entities:
-  - device_tracker.daniel
-  - device_tracker.sara
