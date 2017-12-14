@@ -1,0 +1,2 @@
+home_assistant_update: 'bash ~/.homeassistant/bin/home_assistant_update.sh'
+
