@@ -40,3 +40,7 @@ MySensors gateway has been installed, to add to the boot run:
 
 To start the gateway run:
 `sudo systemctl start mysgateway.service`
+
+## Resources
+
+* [Using a usb audio device on a raspberry-pi zero](https://raspberrytips.nl/usb-audio-gebruiken-op-een-raspberry-pi/)
