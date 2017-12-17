@@ -22,3 +22,7 @@
   - wind_speed
   - temperature_min
   - temperature_max
+
+- platform: cert_expiry
+    host: !secret home_assistant_url
+    port: !secret home_assistant_port
