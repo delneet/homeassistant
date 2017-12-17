@@ -8,6 +8,7 @@ Currently running as a manual install on a raspberry pi zero.
 - [ ] Ansible configuration
 - [ ] Run Mosquitto externally
 - [ ] Graphite database
+- [ ] Mopidy and snapcast ([link](https://home-assistant.io/blog/2016/02/18/multi-room-audio-with-snapcast/))
 
 ## Configurations
 
