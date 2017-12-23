@@ -3,10 +3,6 @@
 - platform: cast
   host: !secret cast_2_host
 
-- platform: mpd
-  name: Mopidy
-  host: !secret mopidy_host
-  port: !secret mopidy_port
 
 - platform: kodi
   host: !secret kodi_host
