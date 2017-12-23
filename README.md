@@ -10,6 +10,12 @@ Currently running as a manual install on a raspberry pi zero.
 - [ ] Graphite database
 - [x] ~Mopidy and snapcast ([link](https://home-assistant.io/blog/2016/02/18/multi-room-audio-with-snapcast/))~
 
+## Devices
+
+* Chromecast 2x
+* Philips Hue starter kit
+* Spotify via [raspotify](https://github.com/dtcooper/raspotify) running locally
+
 ## Configurations
 
 ### External access
