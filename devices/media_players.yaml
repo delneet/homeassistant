@@ -4,7 +4,7 @@
   host: !secret cast_2_host
 
 - platform: spotify
-  client_id: !secret spotify_client_secret
+  client_id: !secret spotify_client_id
   client_secret: !secret spotify_client_secret
 
 - platform: kodi
