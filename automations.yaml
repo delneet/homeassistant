@@ -59,11 +59,11 @@
   condition:
   - condition: time
     weekday:
-      - mon
-      - tue
-      - wed
-      - thu
-      - fri
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
   - condition: state
     entity_id: group.personen
     state: 'home'
