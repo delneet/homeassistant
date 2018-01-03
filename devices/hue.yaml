@@ -1,0 +1,2 @@
+bridges:
+- host: !secret lights_hue_host
