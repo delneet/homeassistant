@@ -50,7 +50,7 @@ mqtt: !include mqtt.yaml
 mysensors: !include mysensors.yaml
 notify: !include config/notify.yaml
 scene: !include scenes.yaml
-script: !include config/scripts.yaml
+script: !include_dir_named config/scripts/
 sensor: !include devices/sensors.yaml
 shell_command: !include config/shell_commands.yaml
 zone: !include zones.yaml

@@ -1,6 +1,0 @@
-update_home_assistant:
-  alias: 'Update HomeAssistant and restart'
-  sequence:
-    - service: shell_command.home_assistant_update
-    - service: homeassistant.restart
-

@@ -32,3 +32,22 @@
       rgb_color: [240, 160, 80]
       brightness: 10
       transition: 5
+
+- name: Woonkamer pre go to bed
+  entities:
+    light.computer:
+      state: off
+      transition: 5
+    light.kast:
+      state: off
+      transition: 5
+    light.raam:
+      state: on
+      rgb_color: [240, 160, 80]
+      brightness_pct: 30
+      transition: 5
+    light.eettafel:
+      state: on
+      rgb_color: [240, 160, 80]
+      brightness_pct: 30
+      transition: 5
