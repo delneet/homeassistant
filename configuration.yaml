@@ -40,6 +40,7 @@ zeroconf:
 
 ### Includes
 automation: !include automations.yaml
+customize: !include customize.yaml
 group: !include groups.yaml
 history: !include history.yaml
 hue: !include devices/hue.yaml
