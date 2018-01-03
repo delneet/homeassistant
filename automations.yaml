@@ -99,7 +99,7 @@
   - service: scene.turn_on
     entity_id: scene.woonkamer_avond
 
-- id: 'chromecast woonkamer playling'
+- id: 'chromecast woonkamer playing'
   alias: "Chromecast woonkamer playing"
   initial_state: 'off'
   trigger:
