@@ -9,6 +9,7 @@ Currently running as a manual install on a raspberry pi zero.
 - [ ] Run Mosquitto externally
 - [ ] Graphite database
 - [x] ~Mopidy and snapcast ([link](https://home-assistant.io/blog/2016/02/18/multi-room-audio-with-snapcast/))~
+- [ ] [HomeBridge](https://github.com/home-assistant/homebridge-homeassistant)
 
 ## Devices
 
