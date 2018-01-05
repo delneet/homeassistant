@@ -5,6 +5,7 @@ homeassistant:
   elevation: 4
   unit_system: metric
   time_zone: !secret geo_time_zone
+  customize: !include config/customize.yaml
 
 config:
 configurator:
@@ -28,7 +29,7 @@ http:
   trusted_networks: !secret http_trusted_networks
 ifttt:
   key: !secret ifttt_key
-logbook:
+logbook: !include config/logbook.yaml
 recorder:
   purge_interval: 1
   purge_keep_days: 7
@@ -40,7 +41,6 @@ zeroconf:
 
 ### Includes
 automation: !include automations.yaml
-customize: !include customize.yaml
 group: !include groups.yaml
 history: !include history.yaml
 hue: !include devices/hue.yaml
