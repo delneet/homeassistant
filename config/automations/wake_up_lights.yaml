@@ -1,0 +1,23 @@
+alias: 'Turn on lights in the morning'
+trigger:
+  platform: time
+  at: '06:30:00'
+condition:
+- condition: time
+  weekday:
+  - mon
+  - tue
+  - wed
+  - thu
+  - fri
+- condition: state
+  entity_id: group.personen
+  state: 'home'
+- condition: state
+  entity_id: group.woonkamer_lampen
+  state: 'off'
+action:
+- service: hue.hue_activate_scene
+  data:
+    group_name: 'Woonkamer'
+    scene_name: 'Nachtlampje'

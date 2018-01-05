@@ -40,7 +40,7 @@ upnp:
 zeroconf:
 
 ### Includes
-automation: !include automations.yaml
+automation: !include_dir_list config/automations/
 group: !include groups.yaml
 history: !include history.yaml
 hue: !include devices/hue.yaml

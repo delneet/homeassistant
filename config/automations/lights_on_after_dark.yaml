@@ -1,0 +1,17 @@
+alias: Turn on lights after dark
+trigger:
+  platform: sun
+  event: sunset
+  offset: -00:45:00
+condition:
+- condition: state
+  entity_id: group.personen
+  state: home
+- condition: state
+  entity_id: group.woonkamer_lampen
+  state: 'off'
+action:
+- service: hue.hue_activate_scene
+  data:
+    group_name: 'Woonkamer'
+    scene_name: 'Avond'

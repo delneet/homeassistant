@@ -1,0 +1,24 @@
+alias: 'Turn on light when coming home'
+trigger:
+  platform: state
+  entity_id: group.personen
+  to: 'home'
+condition:
+  condition: and
+  conditions:
+  - condition: state
+    entity_id: group.woonkamer_lampen
+    state: 'off'
+  - condition: time
+    after: '17:00:00'
+    before: '23:00:00'
+  - condition: state
+    entity_id: script.go_to_bed
+    state: 'off'
+    for:
+      hours: 2
+action:
+- service: hue.hue_activate_scene
+  data:
+    group_name: 'Woonkamer'
+    scene_name: 'Avond'
