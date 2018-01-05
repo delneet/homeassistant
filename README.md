@@ -1,4 +1,4 @@
-[HomeAssistant](https://home-assistant.io) version 0.58
+[HomeAssistant](https://home-assistant.io) version 0.60
 
 Currently running as a manual install on a raspberry pi zero.
 
