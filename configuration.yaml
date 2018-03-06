@@ -5,7 +5,7 @@ homeassistant:
   elevation: 4
   unit_system: metric
   time_zone: !secret geo_time_zone
-  customize: !include config/customize.yaml
+  customize: !include customize.yaml
 
 config:
 configurator:

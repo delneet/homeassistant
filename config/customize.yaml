@@ -1,3 +1,0 @@
-script.go_to_bed:
-  icon: mdi:sleep
-  can_cancel: false

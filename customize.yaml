@@ -1,0 +1,45 @@
+script.go_to_bed:
+  icon: mdi:sleep
+  can_cancel: false
+group.woonkamer_tab:
+  friendly_name: Woonkamer
+  icon: mdi:sofa
+group.slaapkamer_tab:
+  friendly_name: Slaapkamer
+  icon: mdi:hotel
+group.people_tab:
+  friendly_name: Aanwezigheid
+  icon: mdi:account-check
+group.devices_tab:
+  friendly_name: Apparaten
+  icon: mdi:chip
+group.lights_tab:
+  friendly_name: Lampen
+  icon: mdi:lightbulb-outline
+group.automations_tab:
+  friendly_name: Automations
+  icon: mdi:auto-fix
+group.woonkamer_lampen:
+  friendly_name: Woonkamer lampen
+group.woonkamer_scenes:
+  friendly_name: Scenes
+group.woonkamer_media:
+  friendly_name: Media
+group.slaapkamer_lampen:
+  friendly_name: Slaapkamer lampen
+group.slaapkamer_media:
+  friendly_name: Media
+group.personen:
+  friendly_name: Personen
+group.devices:
+  friendly_name: Apparaten
+group.sensors:
+  friendly_name: Sensors
+group.metrics:
+  friendly_name: Metrics
+group.network:
+  friendly_name: Netwerk
+group.weather:
+  friendly_name: Weer
+group.automations:
+  friendly_name: Automations
