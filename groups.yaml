@@ -19,6 +19,12 @@ people_tab:
   entities:
     - group.personen
 
+scripts_tab:
+  view: yes
+  entities:
+  - group.scripts_states
+  - group.scripts_system
+
 metrics_tab:
   view: yes
   entities:
@@ -98,6 +104,14 @@ network:
   - sensor.igd_packets_sent
   - sensor.igd_received_bytes
   - sensor.igd_sent_bytes
+
+scripts_states:
+  entities:
+  - script.go_to_bed
+
+scripts_system:
+  entities:
+  - script.update_home_assistant
 
 ssl:
   entities:
