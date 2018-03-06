@@ -6,10 +6,3 @@
 - platform: spotify
   client_id: !secret spotify_client_id
   client_secret: !secret spotify_client_secret
-
-- platform: kodi
-  host: !secret kodi_host
-  port: !secret kodi_port
-  username: !secret kodi_username
-  password: !secret kodi_password
-  turn_off_action: suspend
