@@ -25,5 +25,5 @@
 
 - platform: cert_expiry
   host: !secret home_assistant_url
-  name: HomeAssistant
+  name: Certificate Expiration
   port: !secret home_assistant_port

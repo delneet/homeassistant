@@ -86,7 +86,9 @@ metrics:
   entities:
     - sensor.since_last_boot
     - sensor.cpu_used
-    - sensor.disk_used_
+    - sensor.disk_use_percent_
+    - sensor.memory_free
+    - sensor.processor_use
     - sensor.ram_available
     - sensor.ipv4_address_wlan0
 
@@ -96,6 +98,10 @@ network:
   - sensor.igd_packets_sent
   - sensor.igd_received_bytes
   - sensor.igd_sent_bytes
+
+ssl:
+  entities:
+  - sensor.homeassistant
 
 weather:
   entities:
