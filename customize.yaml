@@ -43,3 +43,13 @@ group.weather:
   friendly_name: Weer
 group.automations:
   friendly_name: Automations
+group.scripts_states:
+  friendly_name: States
+group.scripts_system:
+  friendly_name: Systeem
+group.metrics_tab:
+  friendly_name: Metrics
+  icon: mdi:chart-donut-variant
+group.scripts_tab:
+  friendly_name: Scripts
+  icon: mdi:animation
