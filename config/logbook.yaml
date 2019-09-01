@@ -2,12 +2,9 @@ exclude:
   domains:
   - scene
   - sun
-  - systemmonitor
   - zone
   entities:
   - media_player.kodi
   - sensor.dark_sky_icon
   - sensor.dark_sky_precip
-  - sensor.date__time
   - sensor.ipv4_address_wlan0
-  - sensor.since_last_boot

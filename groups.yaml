@@ -85,18 +85,18 @@ sensors:
 
 tijd:
   - sun.sun
-  - sensor.date__time
-  - sensor.time__date
+#  - sensor.date__time
+#  - sensor.time__date
 
 metrics:
   entities:
-    - sensor.since_last_boot
-    - sensor.cpu_used
-    - sensor.disk_use_percent_
-    - sensor.memory_free
-    - sensor.processor_use
-    - sensor.ram_available
-    - sensor.ipv4_address_wlan0
+#    - sensor.since_last_boot
+#    - sensor.cpu_used
+#    - sensor.disk_use_percent_
+#    - sensor.memory_free
+#    - sensor.processor_use
+#    - sensor.ram_available
+#    - sensor.ipv4_address_wlan0
 
 network:
   entities:

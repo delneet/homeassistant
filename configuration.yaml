@@ -24,8 +24,8 @@ frontend:
 http:
   api_password: !secret http_api_password
   base_url: !secret http_base_url
-  ssl_certificate: !secret http_ssl_certificate
-  ssl_key: !secret http_ssl_key
+  #ssl_certificate: !secret http_ssl_certificate
+  #ssl_key: !secret http_ssl_key
   trusted_networks: !secret http_trusted_networks
 ifttt:
   key: !secret ifttt_key
