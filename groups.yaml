@@ -51,28 +51,25 @@ automations_tab:
 woonkamer_lampen:
   entities:
     - light.raam
-    - light.computer
+    - light.kist
     - light.eettafel
     - light.kast
 
 woonkamer_scenes:
   entities:
-    - scene.woonkamer_romantic
     - scene.woonkamer_avond
     - scene.woonkamer_avond_tv
     - scene.woonkamer_nacht
 
 woonkamer_media:
   entities:
-    - media_player.woonkamer
-    - media_player.openelec
+    - media_player.tv
 
 slaapkamer_lampen:
   entities:
 
 slaapkamer_media:
   entities:
-    - media_player.slaapkamer
 
 personen:
   entities: !secret person_entities
@@ -81,7 +78,6 @@ devices:
   entities: !secret device_entities
 
 sensors:
-  entities: !secret sensor_entities
 
 tijd:
   - sun.sun
@@ -105,14 +101,6 @@ network:
   - sensor.igd_received_bytes
   - sensor.igd_sent_bytes
 
-scripts_states:
-  entities:
-  - script.go_to_bed
-
-scripts_system:
-  entities:
-  - script.update_home_assistant
-
 ssl:
   entities:
   - sensor.homeassistant
@@ -127,7 +115,3 @@ weather:
   - sensor.dark_sky_daily_low_temperature
   - sensor.dark_sky_daily_high_temperature
 
-automations:
-  name: Automations
-  entities:
-    - input_boolean.woonkamer_chromecast_lights

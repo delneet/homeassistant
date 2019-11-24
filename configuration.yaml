@@ -10,23 +10,24 @@ homeassistant:
 config:
 configurator:
 conversation:
+default_config:
 device_tracker:
   exclude: !secret device_tracker_excluded_hosts
   home_interval: 10
   hosts: !secret device_tracker_hosts
   platform: nmap_tracker
-  track_new_devices: no
+  track_new_devices: true
 discovery:
 duckdns:
   access_token: !secret duckdns_access_token
   domain: !secret duckdns_domain
 frontend:
 http:
-  api_password: !secret http_api_password
+#  api_password: !secret http_api_password
   base_url: !secret http_base_url
-  #ssl_certificate: !secret http_ssl_certificate
-  #ssl_key: !secret http_ssl_key
-  trusted_networks: !secret http_trusted_networks
+#  #ssl_certificate: !secret http_ssl_certificate
+#  #ssl_key: !secret http_ssl_key
+#  trusted_networks: !secret http_trusted_networks
 ifttt:
   key: !secret ifttt_key
 logbook: !include config/logbook.yaml
@@ -34,23 +35,23 @@ recorder:
   purge_interval: 1
   purge_keep_days: 7
 sun:
+system_health:
+tts:
+- platform: google_translate
+  language: 'nl'
 updater:
 upnp:
   port_mapping: false # This is done manually on the router.
 zeroconf:
 
 ### Includes
-automation: !include_dir_list config/automations/
 group: !include groups.yaml
 history: !include history.yaml
 hue: !include devices/hue.yaml
-input_boolean: !include input_boolean.yaml
 media_player: !include devices/media_players.yaml
-mqtt: !include mqtt.yaml
-mysensors: !include mysensors.yaml
+#mqtt: !include mqtt.yaml
 notify: !include config/notify.yaml
+panel_iframe: !include panel_iframe.yaml
 scene: !include scenes.yaml
-script: !include_dir_named config/scripts/
 sensor: !include devices/sensors.yaml
-shell_command: !include config/shell_commands.yaml
 zone: !include zones.yaml
