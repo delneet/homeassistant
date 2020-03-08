@@ -10,3 +10,5 @@ wapscan.*
 secrets.yaml
 known_devices.yaml
 .HA_VERSION
+config/SERVICE_ACCOUNT.JSON
+webostv.conf

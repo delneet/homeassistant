@@ -2,3 +2,8 @@
   platform: slack
   api_key: !secret notify_slack_home_assistant_token
   default_channel: !secret notify_slack_home_assistant_channel
+
+- name: lg_woonkamer
+  platform: webostv
+  host: !secret lg_webostv_ip
+  filename: lgtv.conf

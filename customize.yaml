@@ -53,3 +53,41 @@ group.metrics_tab:
 group.scripts_tab:
   friendly_name: Scripts
   icon: mdi:animation
+device_tracker.nintendo_switch:
+  icon: mdi:nintendo-switch
+device_tracker.chromecast:
+  icon: mdi:google-chrome
+device_tracker.galaxy_s7_edge_daniel:
+  icon: mdi:cellphone
+device_tracker.huawei_p10_lite_sara:
+  icon: mdi:cellphone
+device_tracker.google_home_mini:
+  icon: mdi:google-home
+media_player.google_mini:
+  icon: mdi:google-home
+device_tracker.yeelight_gang:
+  icon: mdi:lightbulb-outline
+device_tracker.yeelight_keuken:
+  icon: mdi:lightbulb-outline
+device_tracker.mbp_daniel:
+  icon: mdi:laptop-mac
+device_tracker.macbook_daniel_werk:
+  icon: mdi:laptop-mac
+device_tracker.laptop_sara:
+  icon: mdi:laptop-windows
+device_tracker.samsung_galaxy_tab:
+  icon: mdi:tablet-android
+device_tracker.lg_tv:
+  icon: mdi:television
+device_tracker.huawei_router:
+  icon: mdi:network-router
+device_tracker.hue_bridge:
+  icon: mdi:network-router
+light.yeelight_color2_7c49ebacc951:
+  friendly_name: yeelight_color2_a
+light.yeelight_color2_7c49ebacc951_2:
+  friendly_name: yeelight_hallway
+light.yeelight_color2_7c49ebacc951_3:
+  friendly_name: yeelight_color2_c
+light.yeelight_color2_7c49ebacc951_4:
+  friendly_name: yeelight_kitchen

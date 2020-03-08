@@ -6,6 +6,8 @@ homeassistant:
   unit_system: metric
   time_zone: !secret geo_time_zone
   customize: !include customize.yaml
+  auth_providers:
+  - type: homeassistant
 
 config:
 configurator:
@@ -18,19 +20,15 @@ device_tracker:
   platform: nmap_tracker
   track_new_devices: true
 discovery:
-duckdns:
-  access_token: !secret duckdns_access_token
-  domain: !secret duckdns_domain
 frontend:
 http:
-#  api_password: !secret http_api_password
   base_url: !secret http_base_url
 #  #ssl_certificate: !secret http_ssl_certificate
 #  #ssl_key: !secret http_ssl_key
-#  trusted_networks: !secret http_trusted_networks
 ifttt:
   key: !secret ifttt_key
 logbook: !include config/logbook.yaml
+mobile_app:
 recorder:
   purge_interval: 1
   purge_keep_days: 7
@@ -39,12 +37,15 @@ system_health:
 tts:
 - platform: google_translate
   language: 'nl'
+  base_url: !secret base_url
 updater:
 upnp:
   port_mapping: false # This is done manually on the router.
+wake_on_lan:
 zeroconf:
 
 ### Includes
+google_assistant: !include config/google_assistant.yaml
 group: !include groups.yaml
 history: !include history.yaml
 hue: !include devices/hue.yaml
@@ -53,5 +54,11 @@ media_player: !include devices/media_players.yaml
 notify: !include config/notify.yaml
 panel_iframe: !include panel_iframe.yaml
 scene: !include scenes.yaml
+script: !include scripts.yaml
+spotify: !include config/spotify.yaml
 sensor: !include devices/sensors.yaml
+weather: !include weather.yaml
+webostv: !include devices/webostv.yaml
+yeelight: !include devices/yeelight.yaml
 zone: !include zones.yaml
+

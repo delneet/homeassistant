@@ -1,0 +1,6 @@
+- name: LG woonkamer
+  host: !secret lg_webostv_ip
+  turn_on_action:
+      service: wake_on_lan.send_magic_packet
+      data:
+        mac: !secret lg_webostv_mac

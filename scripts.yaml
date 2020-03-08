@@ -1,0 +1,6 @@
+welterusten:
+  alias: Welterusten
+  sequence:
+  - data: {}
+    entity_id: light.woonkamer
+    service: light.turn_off
