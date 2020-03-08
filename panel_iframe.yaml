@@ -1,0 +1,6 @@
+node_red:
+  title: 'Node Red'
+  url: !secret panel_node_red_url
+  icon: 'mdi:shuffle-variant'
+  require_admin: true
+

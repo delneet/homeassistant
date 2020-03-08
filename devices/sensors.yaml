@@ -1,7 +1,3 @@
-- platform: time_date
-  display_options:
-    - 'date_time'
-
 - platform: systemmonitor
   resources:
     - type: disk_use_percent
@@ -10,18 +6,28 @@
     - type: processor_use
     - type: ipv4_address
       arg: wlan0
-    - type: since_last_boot
 
 - platform: darksky
   api_key: !secret darksky_api_key
+  forecast:
+  - 0
+  hourly_forecast:
+  - 0
+  - 1
+  language: nl
   monitored_conditions:
   - summary
   - icon
   - precip_type
+  - precip_intensity
+  - precip_accumulation
   - temperature
   - wind_speed
-  - temperature_min
-  - temperature_max
+  - hourly_summary
+  - temperature_low
+  - temperature_high
+  - sunrise_time
+  - sunset_time
 
 - platform: cert_expiry
   host: !secret home_assistant_url

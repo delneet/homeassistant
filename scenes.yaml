@@ -1,53 +1,33 @@
-- name: Woonkamer romantic
-  entities:
-    light.raam:
-      state: on
-      rgb_color: [250, 0, 0]
-      transition: 3
-    light.computer:
-      state: on
-      rgb_color: [240, 10, 10]
-      transition: 3
-
 - name: Woonkamer avond
   entities:
-    group.woonkamer_lampen:
-      state: on
-      rgb_color: [240, 160, 80]
+    light.woonkamer:
+      state: true
+      rgb_color:
+      - 240
+      - 160
+      - 80
       brightness: 180
       transition: 2
-
+  id: 4cecf5dd595e487a81701f1f8dcf9aab
 - name: Woonkamer avond tv
   entities:
-    group.woonkamer_lampen:
-      state: on
-      rgb_color: [240, 160, 80]
+    light.woonkamer:
+      state: true
+      rgb_color:
+      - 240
+      - 160
+      - 80
       brightness: 80
       transition: 2
-
+  id: cd706fdba3f643d9979ed8d953cb801f
 - name: Woonkamer nacht
   entities:
-    group.woonkamer_lampen:
-      state: on
-      rgb_color: [240, 160, 80]
+    light.woonkamer:
+      state: true
+      rgb_color:
+      - 240
+      - 160
+      - 80
       brightness: 10
       transition: 5
-
-- name: Woonkamer pre go to bed
-  entities:
-    light.computer:
-      state: off
-      transition: 5
-    light.kast:
-      state: off
-      transition: 5
-    light.raam:
-      state: on
-      rgb_color: [240, 160, 80]
-      brightness_pct: 30
-      transition: 5
-    light.eettafel:
-      state: on
-      rgb_color: [240, 160, 80]
-      brightness_pct: 30
-      transition: 5
+  id: 01502954660044a0807ed78e45e69e2c

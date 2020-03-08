@@ -1,7 +1,0 @@
-gateways:
-  - device: !secret mysensors_gateway
-    persistence_file: !secret mysensors_persistence_file
-persistence: true
-version: 2.0
-retain: true
-optimistic: false
